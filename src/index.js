@@ -1,7 +1,7 @@
 import _, { create } from "lodash";
 import "/styles/style.css";
 
-const element = document.getElementById("content");
+const content = document.getElementById("content");
 
 function component() {
   // const btn = document.createElement("button");
@@ -15,18 +15,17 @@ function component() {
   // element.classList.add("hello");
   // return element;
   createNav();
+  createIntro();
 }
 
 function createNav() {
   const nav = document.createElement("nav");
   const ul = document.createElement("ul");
 
-  const isiNav = ["About Us", "Menu", "Contacs"];
-
-  element.appendChild(nav);
+  content.appendChild(nav);
 
   const logoDiv = document.createElement("div");
-  logoDiv.classList.add("logoDiv");
+  logoDiv.classList.add("logo-div");
   const newLogo = document.createElement("img");
   newLogo.setAttribute("src", "spoonfork.png");
   newLogo.classList.add("logo");
@@ -56,7 +55,7 @@ function createNav() {
   ul.appendChild(contactsNav);
 
   const cartNav = document.createElement("div");
-  cartNav.classList.add("cartNav");
+  cartNav.classList.add("cart-nav");
   const cartLogo = document.createElement("img");
   cartLogo.setAttribute("src", "shopping-cart.png");
   cartLogo.classList.add("cart");
@@ -67,6 +66,76 @@ function createNav() {
   reserveNav.classList.add("reserve");
   reserveNav.innerHTML = "Reserve Table";
   nav.appendChild(reserveNav);
+}
+
+function createIntro() {
+  // intro text
+  const section = document.createElement("section");
+  section.classList.add("intro");
+  content.appendChild(section);
+
+  const introDiv = document.createElement("div");
+  introDiv.classList.add("intro-div");
+  section.appendChild(introDiv);
+
+  // create title intro
+  const introTitle = document.createElement("h2");
+  introTitle.innerHTML = "We Serve The Taste You Love";
+  introDiv.appendChild(introTitle);
+
+  // create intro text
+  const introText = document.createElement("p");
+  introText.innerHTML =
+    "This is the type of restaurant that serves foods and beverages, in additionto light refreshments such as baked goods or snacks. The term comes from the French word meaning food.";
+  introDiv.appendChild(introText);
+
+  const buttonSearch = document.createElement("div");
+  buttonSearch.classList.add("button-search");
+  introDiv.appendChild(buttonSearch);
+
+  // create button
+  const button = document.createElement("div");
+  button.classList.add("button");
+  buttonSearch.appendChild(button);
+  const exploreButton = document.createElement("button");
+  exploreButton.classList.add("explore-button");
+  exploreButton.innerHTML = "Explore Food";
+  button.appendChild(exploreButton);
+
+  // create search button
+  // const searchButton = document.createElement("input");
+  // searchButton.classList.add("search-button");
+  // searchButton.setAttribute("type", "search");
+  // //searchButton.innerHTML = "Search";
+  // introDiv.appendChild(searchButton);
+
+  // create search
+  const searchContainer = document.createElement("div");
+  searchContainer.classList.add("search-container");
+  buttonSearch.appendChild(searchContainer);
+  const input = document.createElement("input");
+  input.classList.add("search-button");
+  input.setAttribute("type", "search");
+  input.setAttribute("placeholder", "Search");
+  searchContainer.appendChild(input);
+
+  const searchIcon = document.createElement("img");
+  searchIcon.setAttribute("src", "search2.png");
+  searchIcon.setAttribute("id", "input-img");
+  searchContainer.appendChild(searchIcon);
+
+  // intro image
+  const introImage = document.createElement("div");
+  introImage.classList.add("intro-image");
+  section.appendChild(introImage);
+
+  // added image
+  const foodImage = document.createElement("img");
+  foodImage.setAttribute("src", "food2.png");
+  foodImage.classList.add("food-image");
+  introImage.appendChild(foodImage);
+
+  // create small buttons
 }
 
 document.body.appendChild(component());
