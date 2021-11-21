@@ -49,6 +49,10 @@ nav {
     padding: 1.2rem 3rem;
     margin: 0rem 2rem;
     border-radius: 3.5rem;
+    cursor: pointer;
+  }
+  button:hover {
+    box-shadow: 0px 10px 25px rgba(112, 112, 112, 0.2);
   }
 }
 
@@ -72,12 +76,73 @@ nav {
 
 .intro-image {
   flex: 1 1 40rem;
-  margin-left: 15rem;
+  margin-left: 8rem;
+  position: relative;
   img {
     // margin: 0rem 0rem 0rem 0rem;
     margin-top: 2rem;
-    max-width: 100%;
+    max-width: 95%;
     background-size: cover;
+  }
+  .intro-buttons {
+    @include flex(space-between, center, column);
+    min-height: 45vh;
+    position: absolute;
+    top: 18%;
+    right: 2rem;
+
+    button {
+      border: none;
+      padding: 0.7rem 3.8rem;
+      background-color: white;
+      border-radius: 2.5rem;
+      cursor: pointer;
+      font-family: "dm-sans-bold", sans-serif;
+      font-size: 1.8rem;
+      color: #643911;
+      transition: transform 0.5s;
+    }
+    button:hover {
+      box-shadow: 0px 10px 20px rgba(97, 97, 97, 0.1);
+      transform: scale(1.1);
+    }
+    .button-1,
+    .button-2,
+    .button-3,
+    .button-4,
+    .button-5 {
+      position: relative;
+    }
+    #dishes-img,
+    #dessert-img,
+    #drinks-img,
+    #platter-img,
+    #snacks-img {
+      width: 17%;
+      position: absolute;
+    }
+    #dishes-img {
+      bottom: 18%;
+      right: 10.8rem;
+    }
+    #dessert-img {
+      bottom: 22%;
+      right: 11.2rem;
+    }
+    #drinks-img {
+      bottom: 25%;
+      right: 10.3rem;
+    }
+    #platter-img {
+      width: 16%;
+      bottom: 22%;
+      right: 10.8rem;
+    }
+    #snacks-img {
+      width: 16%;
+      bottom: 24%;
+      right: 11.2rem;
+    }
   }
 }
 
@@ -105,6 +170,12 @@ nav {
     margin-right: 2rem;
     background-color: #f3bc58;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 2.3rem;
+  }
+  .explore-button:hover {
+    color: #f3bc58;
+    background-color: #9e5d20;
   }
   .search-container {
     position: relative;
@@ -114,22 +185,28 @@ nav {
   }
   .search-button {
     background-color: #f9f3ea;
-    border: 0.4rem solid #fad18b;
-    padding: 1rem 0rem;
+    border: 0.3rem solid #fad18b;
+    padding: 1rem 1rem;
     border-radius: 3rem;
     text-align: center;
     margin-top: 5rem;
     color: #643911;
+    font-size: 2.3rem;
   }
 }
 
 #input-img {
   position: absolute;
-  top: 6.6rem;
-  right: 18.5rem;
+  top: 6.4rem;
+  right: 19rem;
 }
 
 @font-face {
   font-family: montserrat-bold;
   src: url("../fonts/MontserratAlternates-Bold.ttf");
+}
+
+@font-face {
+  font-family: dm-sans-bold;
+  src: url("../fonts/DMSans-Bold.ttf");
 }

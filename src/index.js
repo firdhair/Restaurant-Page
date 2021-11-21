@@ -136,6 +136,60 @@ function createIntro() {
   introImage.appendChild(foodImage);
 
   // create small buttons
+  // types of foods
+  const introButtons = document.createElement("div");
+  introButtons.classList.add("intro-buttons");
+  introImage.appendChild(introButtons);
+
+  const button1 = document.createElement("button");
+  button1.classList.add("buttons");
+  button1.classList.add("button-1");
+  button1.innerHTML = "Dishes";
+  introButtons.appendChild(button1);
+  const dishesIcon = document.createElement("img");
+  dishesIcon.setAttribute("src", "dishes.png");
+  dishesIcon.setAttribute("id", "dishes-img");
+  button1.appendChild(dishesIcon);
+
+  const button2 = document.createElement("button");
+  button1.classList.add("buttons");
+  button2.classList.add("button-2");
+  button2.innerHTML = "Dessert";
+  introButtons.appendChild(button2);
+  const dessertIcon = document.createElement("img");
+  dessertIcon.setAttribute("src", "dessert.png");
+  dessertIcon.setAttribute("id", "dessert-img");
+  button2.appendChild(dessertIcon);
+
+  const button3 = document.createElement("button");
+  button1.classList.add("buttons");
+  button3.classList.add("button-3");
+  button3.innerHTML = "Drinks";
+  introButtons.appendChild(button3);
+  const drinkIcon = document.createElement("img");
+  drinkIcon.setAttribute("src", "drinks.png");
+  drinkIcon.setAttribute("id", "drinks-img");
+  button3.appendChild(drinkIcon);
+
+  const button4 = document.createElement("button");
+  button1.classList.add("buttons");
+  button4.classList.add("button-4");
+  button4.innerHTML = "Platter";
+  introButtons.appendChild(button4);
+  const platterIcon = document.createElement("img");
+  platterIcon.setAttribute("src", "platter.png");
+  platterIcon.setAttribute("id", "platter-img");
+  button4.appendChild(platterIcon);
+
+  const button5 = document.createElement("button");
+  button1.classList.add("buttons");
+  button5.classList.add("button-5");
+  button5.innerHTML = "Snacks";
+  introButtons.appendChild(button5);
+  const snackIcon = document.createElement("img");
+  snackIcon.setAttribute("src", "snacks.png");
+  snackIcon.setAttribute("id", "snacks-img");
+  button5.appendChild(snackIcon);
 }
 
 document.body.appendChild(component());
