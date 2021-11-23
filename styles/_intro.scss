@@ -31,6 +31,9 @@ nav {
   ul {
     @include flex(space-around, center, row);
     flex: 1 1 15rem;
+    li {
+      font-size: 2.1rem;
+    }
   }
 
   .cart {
@@ -59,7 +62,7 @@ nav {
 .intro {
   margin: auto;
   margin-top: 2rem;
-  min-height: 85vh;
+  min-height: 35vh;
   flex-wrap: wrap;
   @include flex(space-between, center, row);
   h2 {
@@ -77,78 +80,52 @@ nav {
 .intro-image {
   flex: 1 1 40rem;
   margin-left: 8rem;
-  position: relative;
-  img {
-    // margin: 0rem 0rem 0rem 0rem;
+  display: flex;
+  margin-bottom: 10rem;
+  .food-image {
     margin-top: 2rem;
     max-width: 95%;
-    background-size: cover;
+    //background-size: cover;
   }
   .intro-buttons {
-    @include flex(space-between, center, column);
-    min-height: 45vh;
+    @include flex(space-around, center, column);
+    min-height: 50vh;
     position: absolute;
-    top: 18%;
-    right: 2rem;
+    margin-top: 6rem;
 
     button {
       border: none;
-      padding: 0.7rem 3.8rem;
+      padding: 0rem;
       background-color: white;
       border-radius: 2.5rem;
       cursor: pointer;
       font-family: "dm-sans-bold", sans-serif;
       font-size: 1.8rem;
-      color: #643911;
+      color: #7c6855;
       transition: transform 0.5s;
+      width: 20%;
+      padding: 0.5rem;
     }
     button:hover {
       box-shadow: 0px 10px 20px rgba(97, 97, 97, 0.1);
       transform: scale(1.1);
     }
-    .button-1,
-    .button-2,
-    .button-3,
-    .button-4,
-    .button-5 {
-      position: relative;
-    }
-    #dishes-img,
-    #dessert-img,
-    #drinks-img,
-    #platter-img,
-    #snacks-img {
-      width: 17%;
-      position: absolute;
-    }
-    #dishes-img {
-      bottom: 18%;
-      right: 10.8rem;
-    }
-    #dessert-img {
-      bottom: 22%;
-      right: 11.2rem;
-    }
-    #drinks-img {
-      bottom: 25%;
-      right: 10.3rem;
-    }
-    #platter-img {
-      width: 16%;
-      bottom: 22%;
-      right: 10.8rem;
-    }
-    #snacks-img {
-      width: 16%;
-      bottom: 24%;
-      right: 11.2rem;
+    .buttons {
+      //flex: 1 1 5rem;
+      margin: 1rem;
+      margin-left: 33rem;
+      img {
+        max-width: 17%;
+        //text-align: center;
+        margin-left: 0.4rem;
+      }
     }
   }
 }
 
 .intro-div {
   flex: 1 1 40rem;
-  margin-bottom: 18rem;
+  margin-bottom: 15rem;
   p {
     margin-top: 5rem;
   }
@@ -193,12 +170,113 @@ nav {
     color: #643911;
     font-size: 2.3rem;
   }
+  #input-img {
+    position: absolute;
+    top: 6.4rem;
+    right: 19rem;
+  }
 }
 
-#input-img {
-  position: absolute;
-  top: 6.4rem;
-  right: 19rem;
+// MENU SECTION
+.title-button-div {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  margin-bottom: 4rem;
+  .menu-title {
+    flex: 2 1 30rem;
+    color: #312000;
+  }
+  .round {
+    margin: 0rem 0.8rem;
+    padding: 0.5rem 1.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .next {
+    margin-right: 2.4rem;
+    // background-color: #f0bc57;
+    border: 0.2rem solid #fad18b;
+    transition: background 0.3s ease-in-out;
+  }
+  .previous {
+    border: 0.2rem solid #fad18b;
+    transition: background 0.3s ease-in-out;
+  }
+  .next:hover,
+  .previous:hover {
+    background: #fad18b;
+    border: 0.2rem solid white;
+  }
+}
+
+// CARDS
+.cards-div {
+  @include flex(space-between, center, row);
+  min-height: 50vh;
+  align-items: center;
+  flex-wrap: wrap;
+  .card-div {
+    text-align: center;
+    flex: 1 1 15rem;
+    min-height: 45vh;
+    margin: 0rem 1rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    margin-bottom: 4rem;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+  .card-div:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(97, 97, 97, 0.1);
+  }
+  img {
+    max-width: 55%;
+    margin: 2rem 0rem 0rem 0rem;
+  }
+  .food-2 {
+    max-width: 60%;
+  }
+  .food-4 {
+    max-width: 83%;
+  }
+  .rating {
+    max-width: 15%;
+    margin: 0;
+    //margin: 0rem 0rem 0.5rem 0rem;
+  }
+  p {
+    margin: 1rem 1rem;
+    font-size: 1.8rem;
+  }
+  .price {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-left: 3.5rem;
+    margin-top: 2.5rem;
+    color: #312000;
+  }
+  h4 {
+    color: #312000;
+  }
+  button {
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #312000;
+    background-color: white;
+    border: 0.2rem solid #fad18b;
+    border-radius: 2rem;
+    padding: 0.7rem 1.4rem;
+    //text-align: right;
+    margin: 0rem 0rem 2rem 4.5rem;
+    transition: background 0.1s ease-in-out;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #fad18b;
+    border: 0.2rem solid white;
+  }
 }
 
 @font-face {

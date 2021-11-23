@@ -127,6 +127,10 @@ nav ul {
           flex: 1 1 15rem;
 }
 
+nav ul li {
+  font-size: 2.1rem;
+}
+
 nav .cart {
   margin: 0rem 0rem 0rem 2.5rem;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
@@ -153,7 +157,7 @@ nav button:hover {
 .intro {
   margin: auto;
   margin-top: 2rem;
-  min-height: 85vh;
+  min-height: 35vh;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   display: -webkit-box;
@@ -188,22 +192,23 @@ nav button:hover {
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
   margin-left: 8rem;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10rem;
 }
 
-.intro-image img {
+.intro-image .food-image {
   margin-top: 2rem;
   max-width: 95%;
-  background-size: cover;
 }
 
 .intro-image .intro-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -211,25 +216,26 @@ nav button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 45vh;
+  min-height: 50vh;
   position: absolute;
-  top: 18%;
-  right: 2rem;
+  margin-top: 6rem;
 }
 
 .intro-image .intro-buttons button {
   border: none;
-  padding: 0.7rem 3.8rem;
+  padding: 0rem;
   background-color: white;
   border-radius: 2.5rem;
   cursor: pointer;
   font-family: "dm-sans-bold", sans-serif;
   font-size: 1.8rem;
-  color: #643911;
+  color: #7c6855;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+  width: 20%;
+  padding: 0.5rem;
 }
 
 .intro-image .intro-buttons button:hover {
@@ -239,55 +245,21 @@ nav button:hover {
           transform: scale(1.1);
 }
 
-.intro-image .intro-buttons .button-1,
-.intro-image .intro-buttons .button-2,
-.intro-image .intro-buttons .button-3,
-.intro-image .intro-buttons .button-4,
-.intro-image .intro-buttons .button-5 {
-  position: relative;
+.intro-image .intro-buttons .buttons {
+  margin: 1rem;
+  margin-left: 33rem;
 }
 
-.intro-image .intro-buttons #dishes-img,
-.intro-image .intro-buttons #dessert-img,
-.intro-image .intro-buttons #drinks-img,
-.intro-image .intro-buttons #platter-img,
-.intro-image .intro-buttons #snacks-img {
-  width: 17%;
-  position: absolute;
-}
-
-.intro-image .intro-buttons #dishes-img {
-  bottom: 18%;
-  right: 10.8rem;
-}
-
-.intro-image .intro-buttons #dessert-img {
-  bottom: 22%;
-  right: 11.2rem;
-}
-
-.intro-image .intro-buttons #drinks-img {
-  bottom: 25%;
-  right: 10.3rem;
-}
-
-.intro-image .intro-buttons #platter-img {
-  width: 16%;
-  bottom: 22%;
-  right: 10.8rem;
-}
-
-.intro-image .intro-buttons #snacks-img {
-  width: 16%;
-  bottom: 24%;
-  right: 11.2rem;
+.intro-image .intro-buttons .buttons img {
+  max-width: 17%;
+  margin-left: 0.4rem;
 }
 
 .intro-div {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
-  margin-bottom: 18rem;
+  margin-bottom: 15rem;
 }
 
 .intro-div p {
@@ -370,10 +342,160 @@ nav button:hover {
   font-size: 2.3rem;
 }
 
-#input-img {
+.button-search #input-img {
   position: absolute;
   top: 6.4rem;
   right: 19rem;
+}
+
+.title-button-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 10vh;
+  margin-bottom: 4rem;
+}
+
+.title-button-div .menu-title {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 30rem;
+          flex: 2 1 30rem;
+  color: #312000;
+}
+
+.title-button-div .round {
+  margin: 0rem 0.8rem;
+  padding: 0.5rem 1.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.title-button-div .next {
+  margin-right: 2.4rem;
+  border: 0.2rem solid #fad18b;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.title-button-div .previous {
+  border: 0.2rem solid #fad18b;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.title-button-div .next:hover,
+.title-button-div .previous:hover {
+  background: #fad18b;
+  border: 0.2rem solid white;
+}
+
+.cards-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 50vh;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cards-div .card-div {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 15rem;
+          flex: 1 1 15rem;
+  min-height: 45vh;
+  margin: 0rem 1rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  margin-bottom: 4rem;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  cursor: pointer;
+}
+
+.cards-div .card-div:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 10px 20px rgba(97, 97, 97, 0.1);
+          box-shadow: 0px 10px 20px rgba(97, 97, 97, 0.1);
+}
+
+.cards-div img {
+  max-width: 55%;
+  margin: 2rem 0rem 0rem 0rem;
+}
+
+.cards-div .food-2 {
+  max-width: 60%;
+}
+
+.cards-div .food-4 {
+  max-width: 83%;
+}
+
+.cards-div .rating {
+  max-width: 15%;
+  margin: 0;
+}
+
+.cards-div p {
+  margin: 1rem 1rem;
+  font-size: 1.8rem;
+}
+
+.cards-div .price {
+  font-size: 1.8rem;
+  text-align: left;
+  margin-left: 3.5rem;
+  margin-top: 2.5rem;
+  color: #312000;
+}
+
+.cards-div h4 {
+  color: #312000;
+}
+
+.cards-div button {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #312000;
+  background-color: white;
+  border: 0.2rem solid #fad18b;
+  border-radius: 2rem;
+  padding: 0.7rem 1.4rem;
+  margin: 0rem 0rem 2rem 4.5rem;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.cards-div button:hover {
+  background: #fad18b;
+  border: 0.2rem solid white;
 }
 
 @font-face {
