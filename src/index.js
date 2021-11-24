@@ -2,6 +2,7 @@ import _, { create } from "lodash";
 import "/styles/style.css";
 
 const content = document.getElementById("content");
+const footerDoc = document.getElementById("footer");
 
 function component() {
   // const btn = document.createElement("button");
@@ -17,6 +18,12 @@ function component() {
   createNav();
   createIntro();
   createMenu();
+  createChef();
+  createPlan();
+  createReview();
+  //chefList();
+  createChefList();
+  createFooter();
 }
 
 function createNav() {
@@ -345,6 +352,381 @@ function createMenu() {
   const button4 = document.createElement("button");
   button4.innerHTML = "Add to Cart";
   price4.appendChild(button4);
+}
+
+function createChef() {
+  // popular dishes section
+  const sectionChef = document.createElement("section");
+  sectionChef.classList.add("chef");
+  content.appendChild(sectionChef);
+
+  const chefDiv = document.createElement("div");
+  chefDiv.classList.add("chef-div");
+  sectionChef.appendChild(chefDiv);
+
+  // Image
+  const chefImage = document.createElement("div");
+  chefImage.classList.add("chef-img");
+  chefDiv.appendChild(chefImage);
+  const imageOfChef = document.createElement("img");
+  imageOfChef.setAttribute("src", "chef3.jpg");
+  imageOfChef.classList.add("chef");
+  chefImage.appendChild(imageOfChef);
+
+  // Description
+  const chefDesc = document.createElement("div");
+  chefDesc.classList.add("chef-desc");
+  chefDiv.appendChild(chefDesc);
+  const descOfChef = document.createElement("h3");
+  chefDesc.appendChild(descOfChef);
+  descOfChef.innerHTML = "We Are More Than Multiple Services";
+  const chefText = document.createElement("p");
+  chefText.classList.add("chef-txt");
+  chefText.innerHTML =
+    "This is the type of restaurant that serves foods and beverages, in additionto light refreshments such as baked goods or snacks. The term comes from the French word meaning food.";
+  chefDesc.appendChild(chefText);
+
+  // create options
+  const chefOpt = document.createElement("div");
+  chefOpt.classList.add("chef-opt");
+  chefDesc.appendChild(chefOpt);
+
+  //option 1
+  const option1 = document.createElement("div");
+  option1.classList.add("option");
+  option1.classList.add("option1");
+  chefOpt.appendChild(option1);
+  const optionImg1 = document.createElement("img");
+  optionImg1.setAttribute("src", "dishes.png");
+  optionImg1.classList.add("opt-img");
+  option1.appendChild(optionImg1);
+  const optionTxt1 = document.createElement("p");
+  optionTxt1.innerHTML = "Online Order";
+  optionTxt1.classList.add("opt-txt");
+  option1.appendChild(optionTxt1);
+
+  //option 2
+  const option2 = document.createElement("div");
+  option2.classList.add("option");
+  option2.classList.add("option2");
+  chefOpt.appendChild(option2);
+  const optionImg2 = document.createElement("img");
+  optionImg2.setAttribute("src", "dishes.png");
+  optionImg2.classList.add("opt-img");
+  option2.appendChild(optionImg2);
+  const optionTxt2 = document.createElement("p");
+  optionTxt2.innerHTML = "Pre-Reservation";
+  optionTxt2.classList.add("opt-txt");
+  option2.appendChild(optionTxt2);
+
+  //option 3
+  const option3 = document.createElement("div");
+  option3.classList.add("option");
+  option3.classList.add("option3");
+  chefOpt.appendChild(option3);
+  const optionImg3 = document.createElement("img");
+  optionImg3.setAttribute("src", "platter.png");
+  optionImg3.classList.add("opt-img");
+  option3.appendChild(optionImg3);
+  const optionTxt3 = document.createElement("p");
+  optionTxt3.innerHTML = "24/7 Service";
+  optionTxt3.classList.add("opt-txt");
+  option3.appendChild(optionTxt3);
+
+  //option 4
+  const option4 = document.createElement("div");
+  option4.classList.add("option");
+  option4.classList.add("option4");
+  chefOpt.appendChild(option4);
+  const optionImg4 = document.createElement("img");
+  optionImg4.setAttribute("src", "snacks.png");
+  optionImg4.classList.add("opt-img");
+  option4.appendChild(optionImg4);
+  const optionTxt4 = document.createElement("p");
+  optionTxt4.innerHTML = "Organized Foodie Place";
+  optionTxt4.classList.add("opt-txt");
+  option4.appendChild(optionTxt4);
+
+  //option 5
+  const option5 = document.createElement("div");
+  option5.classList.add("option");
+  option5.classList.add("option5");
+  chefOpt.appendChild(option5);
+  const optionImg5 = document.createElement("img");
+  optionImg5.setAttribute("src", "platter.png");
+  optionImg5.classList.add("opt-img");
+  option5.appendChild(optionImg5);
+  const optionTxt5 = document.createElement("p");
+  optionTxt5.innerHTML = "Clean Kitchen";
+  optionTxt5.classList.add("opt-txt");
+  option5.appendChild(optionTxt5);
+
+  //option 6
+  const option6 = document.createElement("div");
+  option6.classList.add("option");
+  option6.classList.add("option6");
+  chefOpt.appendChild(option6);
+  const optionImg6 = document.createElement("img");
+  optionImg6.setAttribute("src", "snacks.png");
+  optionImg6.classList.add("opt-img");
+  option6.appendChild(optionImg6);
+  const optionTxt6 = document.createElement("p");
+  optionTxt6.innerHTML = "Master Chef";
+  optionTxt6.classList.add("opt-txt");
+  option6.appendChild(optionTxt6);
+
+  const buttonChef = document.createElement("button");
+  buttonChef.classList.add("btn-chef");
+  buttonChef.innerHTML = "About Us";
+  chefDesc.appendChild(buttonChef);
+}
+
+function createPlan() {
+  // popular dishes section
+  const sectionPlan = document.createElement("section");
+  sectionPlan.classList.add("plan");
+  content.appendChild(sectionPlan);
+
+  const planDiv = document.createElement("div");
+  planDiv.classList.add("plan-div");
+  sectionPlan.appendChild(planDiv);
+
+  // Description
+  const planDesc = document.createElement("div");
+  planDesc.classList.add("plan-desc");
+  planDiv.appendChild(planDesc);
+  const descOfPlan = document.createElement("h3");
+  planDesc.appendChild(descOfPlan);
+  descOfPlan.innerHTML = "Do You Have Any Dinner Plan? Reserve Your Table";
+  const planText = document.createElement("p");
+  planText.classList.add("plan-txt");
+  planText.innerHTML =
+    "This is the type of restaurant that serves foods and beverages, in additionto light refreshments such as baked goods or snacks. The term comes from the French word meaning food.";
+  planDesc.appendChild(planText);
+
+  // Image
+  const planImg = document.createElement("div");
+  planImg.classList.add("plan-img");
+  planDiv.appendChild(planImg);
+  const imageOfPlan = document.createElement("img");
+  imageOfPlan.setAttribute("src", "chef1.jpg");
+  imageOfPlan.classList.add("plan");
+  planImg.appendChild(imageOfPlan);
+
+  // Button
+  const buttonPlan = document.createElement("button");
+  buttonPlan.classList.add("btn-reservation");
+  buttonPlan.innerHTML = "Make Reservation";
+  planDesc.appendChild(buttonPlan);
+}
+
+function createReview() {
+  // popular dishes section
+  const sectionMenu = document.createElement("section");
+  sectionMenu.classList.add("review");
+  content.appendChild(sectionMenu);
+
+  const menuDiv = document.createElement("div");
+  menuDiv.classList.add("menu-div");
+  menuDiv.classList.add("review");
+  sectionMenu.appendChild(menuDiv);
+
+  const titleButtons = document.createElement("div");
+  titleButtons.classList.add("title-button-div");
+  menuDiv.appendChild(titleButtons);
+
+  // create menu title
+  const menuTitle = document.createElement("h3");
+  menuTitle.classList.add("menu-title");
+  menuTitle.innerHTML = "What Does Our Costumer Say?";
+  titleButtons.appendChild(menuTitle);
+
+  // create previous & next button
+  const buttonPrev = document.createElement("a");
+  buttonPrev.classList.add("previous");
+  buttonPrev.classList.add("round");
+  buttonPrev.innerHTML = "&#8249";
+  titleButtons.appendChild(buttonPrev);
+
+  const buttonNext = document.createElement("a");
+  buttonNext.classList.add("next");
+  buttonNext.classList.add("round");
+  buttonNext.innerHTML = "&#8250";
+  titleButtons.appendChild(buttonNext);
+
+  const menuCards = document.createElement("div");
+  menuCards.classList.add("cards-div");
+  menuDiv.appendChild(menuCards);
+
+  const menuCard = document.createElement("div");
+  menuCard.classList.add("card-div");
+  menuCards.appendChild(menuCard);
+  const cardIcon1 = document.createElement("div");
+  cardIcon1.classList.add("card-icon");
+  menuCard.appendChild(cardIcon1);
+  const pastaP = document.createElement("p");
+  pastaP.innerHTML =
+    "Pasta is a type of food typically made from unleavened dough Pasta is a type of food typically made from unleavened dough Pasta is a type of food typically made from unleavened dough";
+  menuCard.appendChild(pastaP);
+  const rating1 = document.createElement("img");
+  rating1.classList.add("profile");
+  rating1.setAttribute("src", "model1.jpg");
+  menuCard.appendChild(rating1);
+  const price = document.createElement("h4");
+  price.classList.add("price");
+  price.innerHTML = "John Doe";
+  menuCard.appendChild(price);
+
+  const menuCard2 = document.createElement("div");
+  menuCard2.classList.add("card-div");
+  menuCards.appendChild(menuCard2);
+  const cardIcon2 = document.createElement("div");
+  cardIcon2.classList.add("card-icon");
+  menuCard2.appendChild(cardIcon2);
+  const pastaP2 = document.createElement("p");
+  pastaP2.innerHTML =
+    "Pasta is a type of food typically made from unleavened dough Pasta is a type of food typically made from unleavened dough Pasta is a type of food typically made from unleavened dough";
+  menuCard2.appendChild(pastaP2);
+  const rating2 = document.createElement("img");
+  rating2.classList.add("profile");
+  rating2.setAttribute("src", "model2.jpg");
+  menuCard2.appendChild(rating2);
+  const price2 = document.createElement("h4");
+  price2.classList.add("price");
+  price2.innerHTML = "John Doey";
+  menuCard2.appendChild(price2);
+
+  const menuCard3 = document.createElement("div");
+  menuCard3.classList.add("card-div");
+  menuCards.appendChild(menuCard3);
+  const cardIcon3 = document.createElement("div");
+  cardIcon3.classList.add("card-icon");
+  menuCard3.appendChild(cardIcon3);
+  const pastaP3 = document.createElement("p");
+  pastaP3.innerHTML =
+    "Pasta is a type of food typically made from unleavened dough Pasta is a type of food typically made from unleavened dough Pasta is a type of food typically made from unleavened dough";
+  menuCard3.appendChild(pastaP3);
+  const rating3 = document.createElement("img");
+  rating3.classList.add("profile");
+  rating3.setAttribute("src", "model3.jpg");
+  menuCard3.appendChild(rating3);
+  const price3 = document.createElement("h4");
+  price3.classList.add("price");
+  price3.innerHTML = "John Doe";
+  menuCard3.appendChild(price3);
+}
+
+function createChefList() {
+  // popular dishes section
+  const sectionMenu = document.createElement("section");
+  sectionMenu.classList.add("chef-list");
+  content.appendChild(sectionMenu);
+
+  const chefsDiv = document.createElement("div");
+  chefsDiv.classList.add("chefs-div");
+  chefsDiv.classList.add("chefs");
+  sectionMenu.appendChild(chefsDiv);
+
+  const titleButtons = document.createElement("div");
+  titleButtons.classList.add("title-button-div");
+  chefsDiv.appendChild(titleButtons);
+
+  // create menu title
+  const menuTitle = document.createElement("h3");
+  menuTitle.classList.add("menu-title");
+  menuTitle.innerHTML = "Meat Our Chefs";
+  titleButtons.appendChild(menuTitle);
+
+  // create previous & next button
+  const buttonPrev = document.createElement("a");
+  buttonPrev.classList.add("previous");
+  buttonPrev.classList.add("round");
+  buttonPrev.innerHTML = "&#8249";
+  titleButtons.appendChild(buttonPrev);
+
+  const buttonNext = document.createElement("a");
+  buttonNext.classList.add("next");
+  buttonNext.classList.add("round");
+  buttonNext.innerHTML = "&#8250";
+  titleButtons.appendChild(buttonNext);
+
+  const menuCards = document.createElement("div");
+  menuCards.classList.add("cards-div");
+  chefsDiv.appendChild(menuCards);
+
+  const menuCard = document.createElement("div");
+  menuCard.classList.add("card-div");
+  menuCards.appendChild(menuCard);
+  const profile = document.createElement("img");
+  profile.classList.add("profile");
+  profile.setAttribute("src", "chef4.jpg");
+  menuCard.appendChild(profile);
+  const name = document.createElement("h4");
+  name.classList.add("name");
+  name.innerHTML = "John Doe";
+  menuCard.appendChild(name);
+
+  const menuCard2 = document.createElement("div");
+  menuCard2.classList.add("card-div");
+  menuCards.appendChild(menuCard2);
+  const profile2 = document.createElement("img");
+  profile2.classList.add("profile");
+  profile2.setAttribute("src", "chef7.jpg");
+  menuCard2.appendChild(profile2);
+  const name2 = document.createElement("h4");
+  name2.classList.add("name");
+  name2.innerHTML = "Mary Jane";
+  menuCard2.appendChild(name2);
+
+  const menuCard3 = document.createElement("div");
+  menuCard3.classList.add("card-div");
+  menuCards.appendChild(menuCard3);
+  const profile3 = document.createElement("img");
+  profile3.classList.add("profile");
+  profile3.setAttribute("src", "chef5.jpg");
+  menuCard3.appendChild(profile3);
+  const name3 = document.createElement("h4");
+  name3.classList.add("name");
+  name3.innerHTML = "Percival Rhys";
+  menuCard3.appendChild(name3);
+
+  const menuCard4 = document.createElement("div");
+  menuCard4.classList.add("card-div");
+  menuCards.appendChild(menuCard4);
+  const profile4 = document.createElement("img");
+  profile4.classList.add("profile");
+  profile4.setAttribute("src", "chef6.jpg");
+  menuCard4.appendChild(profile4);
+  const name4 = document.createElement("h4");
+  name4.classList.add("name");
+  name4.innerHTML = "Joshua An";
+  menuCard4.appendChild(name4);
+}
+
+function createFooter() {
+  const footerDiv = document.createElement("div");
+  footerDiv.classList.add("footer-wrapper");
+  footerDoc.appendChild(footerDiv);
+
+  // const footerDiv = document.createElement("div");
+  // footerDiv.classList.add("footer-wrapper");
+  // footerDoc.appendChild(footerDiv);
+  // const logo = document.createElement("h5");
+  // logo.innerHTML("Bites");
+  // footerDiv.appendChild("logo");
+  // const ul = document.createElement("ul");
+  // footerDiv.appendChild(ul);
+  // const li1 = document.createElement("li");
+  // ul.appendChild(li1);
+  // const a1 = document.createElement("a");
+  // li1.appendChild(a1);
+  // const img1 = document.createElement("img");
+  // img1.setAttribute("src", "twitter.svg");
+  // a1.appendChild(img1);
+  // const newLogo = document.createElement("img");
+  // newLogo.setAttribute("src", "spoonfork.png");
+  // newLogo.classList.add("logo");
+  // logoDiv.appendChild(newLogo);
 }
 
 document.body.appendChild(component());

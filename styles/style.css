@@ -24,7 +24,7 @@ label,
 input,
 a,
 p {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 h2 {
@@ -37,7 +37,7 @@ h3 {
 
 h4,
 h5 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 ul {
@@ -51,6 +51,7 @@ a {
 
 body {
   background-color: #f9f3ea;
+  font-family: "quicksand", sans-serif;
 }
 
 #content {
@@ -125,6 +126,7 @@ nav ul {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 15rem;
           flex: 1 1 15rem;
+  align-items: center;
 }
 
 nav ul li {
@@ -133,8 +135,8 @@ nav ul li {
 
 nav .cart {
   margin: 0rem 0rem 0rem 2.5rem;
-  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+          box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
   height: 3%;
   width: 3%;
   border-radius: 5rem;
@@ -201,6 +203,7 @@ nav button:hover {
 .intro-image .food-image {
   margin-top: 2rem;
   max-width: 95%;
+  margin-right: 5rem;
 }
 
 .intro-image .intro-buttons {
@@ -209,15 +212,17 @@ nav button:hover {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 50vh;
+  min-height: 52vh;
   position: absolute;
+  width: 40%;
+  margin: auto;
   margin-top: 6rem;
 }
 
@@ -227,15 +232,16 @@ nav button:hover {
   background-color: white;
   border-radius: 2.5rem;
   cursor: pointer;
-  font-family: "dm-sans-bold", sans-serif;
   font-size: 1.8rem;
+  font-weight: bold;
   color: #7c6855;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-  width: 20%;
+  max-width: 20%;
   padding: 0.5rem;
+  font-family: "quicksand", sans-serif;
 }
 
 .intro-image .intro-buttons button:hover {
@@ -247,7 +253,6 @@ nav button:hover {
 
 .intro-image .intro-buttons .buttons {
   margin: 1rem;
-  margin-left: 33rem;
 }
 
 .intro-image .intro-buttons .buttons img {
@@ -255,11 +260,15 @@ nav button:hover {
   margin-left: 0.4rem;
 }
 
+.intro-image .intro-buttons .buttons img:before {
+  padding: 2rem;
+}
+
 .intro-div {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
-  margin-bottom: 15rem;
+  margin-bottom: 12rem;
 }
 
 .intro-div p {
@@ -312,10 +321,12 @@ nav button:hover {
   color: #643911;
   margin-right: 2rem;
   background-color: #f3bc58;
-  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+          box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+  border: 0.3rem solid white;
   cursor: pointer;
   font-size: 2.3rem;
+  font-family: "quicksand", sans-serif;
 }
 
 .button-search .explore-button:hover {
@@ -340,6 +351,7 @@ nav button:hover {
   margin-top: 5rem;
   color: #643911;
   font-size: 2.3rem;
+  font-family: "quicksand", sans-serif;
 }
 
 .button-search #input-img {
@@ -363,7 +375,7 @@ nav button:hover {
       -ms-flex-direction: row;
           flex-direction: row;
   min-height: 10vh;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .title-button-div .menu-title {
@@ -403,9 +415,9 @@ nav button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -417,6 +429,7 @@ nav button:hover {
   align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 9rem;
 }
 
 .cards-div .card-div {
@@ -434,6 +447,9 @@ nav button:hover {
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
   cursor: pointer;
+  min-width: 30vh;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
+          box-shadow: rgba(0, 0, 0, 0.09) 0 6px 9px 0;
 }
 
 .cards-div .card-div:hover {
@@ -464,6 +480,7 @@ nav button:hover {
 .cards-div p {
   margin: 1rem 1rem;
   font-size: 1.8rem;
+  padding: 0rem 0.5rem;
 }
 
 .cards-div .price {
@@ -491,11 +508,322 @@ nav button:hover {
   -webkit-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
   cursor: pointer;
+  font-family: "quicksand", sans-serif;
 }
 
 .cards-div button:hover {
   background: #fad18b;
   border: 0.2rem solid white;
+}
+
+.chef-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 13rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.chef-div .chef-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
+}
+
+.chef-div .chef-img img {
+  max-width: 100%;
+  border-radius: 3rem;
+}
+
+.chef-div .chef-desc {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
+  min-height: 70vh;
+  color: #312000;
+  margin: 0rem 0rem 0rem 2rem;
+}
+
+.chef-div .chef-desc h3 {
+  margin-top: 2rem;
+  padding: 0rem 18rem 0rem 0rem;
+}
+
+.chef-div .chef-desc .chef-txt {
+  font-size: 2rem;
+  margin: 3rem 0rem 3rem 0rem;
+}
+
+.chef-div .chef-desc .chef-opt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.chef-div .chef-desc .option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 50%;
+}
+
+.chef-div .chef-desc .opt-img {
+  max-width: 10%;
+  margin-right: 1.5rem;
+  background-color: white;
+  padding: 0.1rem;
+  border-radius: 50%;
+}
+
+.chef-div .chef-desc .opt-txt {
+  position: relative;
+  bottom: 0.7rem;
+  right: 0.5rem;
+  margin: 1rem 0rem;
+  font-weight: bold;
+}
+
+.chef-div .chef-desc button {
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #312000;
+  background-color: #fad18b;
+  font-family: "quicksand", sans-serif;
+  border-radius: 2rem;
+  padding: 0.8rem 4rem;
+  margin: 1rem 0rem 2rem 0rem;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chef-div .chef-desc button:hover {
+  color: #fad18b;
+  background-color: #312000;
+}
+
+.plan-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 10rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.plan-div h3 {
+  margin: 0rem 0rem 3rem 0rem;
+}
+
+.plan-div .plan-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30rem;
+          flex: 1 1 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.plan-div .plan-img img {
+  max-width: 80%;
+  border-radius: 3rem;
+}
+
+.plan-div .plan-desc {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
+  min-height: 50vh;
+}
+
+.plan-div .plan-desc h3 {
+  padding-right: 13rem;
+}
+
+.plan-div .plan-desc .plan-txt {
+  padding-right: 3rem;
+}
+
+.plan-div .plan-desc button {
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #312000;
+  background-color: #fad18b;
+  font-family: "quicksand", sans-serif;
+  border-radius: 2rem;
+  padding: 0.8rem 4rem;
+  margin: 5rem 0rem 2rem 0rem;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.plan-div .plan-desc button:hover {
+  color: #fad18b;
+  background-color: #312000;
+}
+
+.review .cards-div {
+  margin-bottom: 8rem;
+}
+
+.review .card-div {
+  background-color: #faead6;
+  min-height: 20vh;
+}
+
+.review p {
+  text-align: left;
+  padding: 1rem 2rem 0.5rem 2rem;
+}
+
+.review .price {
+  text-align: left;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.review .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  margin-left: 3rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.chefs-div .cards-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.chefs-div .card-div {
+  max-width: 25rem;
+}
+
+.chefs-div .profile {
+  max-width: 60%;
+  border-radius: 2.5rem;
+}
+
+.chefs-div .name {
+  margin: 1rem 0rem 2rem 0rem;
+}
+
+footer {
+  color: white;
+  background: #643911;
+}
+
+footer .footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 10vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer h5 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  font-size: 2.5rem;
 }
 
 @font-face {
@@ -506,5 +834,19 @@ nav button:hover {
 @font-face {
   font-family: dm-sans-bold;
   src: url("../fonts/DMSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url("../fonts/Quicksand-VariableFont_wght.ttf");
+}
+
+@media screen and (max-width: 932px) {
+  footer {
+    text-align: center;
+  }
+  footer h5 {
+    padding-bottom: 3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
