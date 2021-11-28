@@ -722,6 +722,11 @@ nav button:hover {
   background-color: #312000;
 }
 
+.active {
+  color: #fad18b;
+  background-color: #312000;
+}
+
 .review .cards-div {
   margin-bottom: 8rem;
 }
