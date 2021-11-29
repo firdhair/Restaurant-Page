@@ -1,4 +1,5 @@
 import loadHomepage from "./homepage";
+import loadContact from "./contacts.js";
 import loadAbout from "./about.js";
 
 function startWeb(){
@@ -6,7 +7,7 @@ function startWeb(){
     loadHomepage();
 }
 
-function createNav() {
+export function createNav() {
     const content = document.getElementById("content");
     const nav = document.createElement("nav");
     const ul = document.createElement("ul");
@@ -30,16 +31,16 @@ function createNav() {
   
     const aboutNav = document.createElement("li");
     aboutNav.classList.add("about");
-    aboutNav.innerHTML = "About Us";
+    aboutNav.innerHTML = "About";
     ul.appendChild(aboutNav);
   
-    const menuNav = document.createElement("li");
-    menuNav.classList.add("menu");
-    menuNav.innerHTML = "Menu";
-    ul.appendChild(menuNav);
+    // const menuNav = document.createElement("li");
+    // menuNav.classList.add("menu");
+    // menuNav.innerHTML = "Menu";
+    // ul.appendChild(menuNav);
   
     const contactsNav = document.createElement("li");
-    contactsNav.classList.add("menu");
+    contactsNav.classList.add("contacts-nav");
     contactsNav.innerHTML = "Contacts";
     ul.appendChild(contactsNav);
   
@@ -56,16 +57,25 @@ function createNav() {
     reserveNav.innerHTML = "Reserve Table";
     nav.appendChild(reserveNav);
   
-    aboutNav.addEventListener("click", (e) => {
+    contactsNav.addEventListener("click", (e) => {
     console.log(e.target)
     content.querySelectorAll('*').forEach(n => n.remove());
-      loadAbout();
+      loadContact();
       setActive(e.target)
     });
-  }
 
-  function setActive(e){
+    aboutNav.addEventListener("click", (e) => {
+      console.log(e.target)
+      content.querySelectorAll('*').forEach(n => n.remove());
+        loadAbout();
+        setActive(e.target)
+      });
+    }
+
+function setActive(e){
     console.log(e);
     e.classList.add("active");
   }
+
+//export {createNav};
 export default startWeb;

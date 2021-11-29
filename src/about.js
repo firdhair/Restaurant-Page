@@ -1,32 +1,13 @@
+import startWeb from "./website";
+import loadContact from "./contacts";
 import "/styles/style.css";
+//import createNav from "./website.js";
 
 const content = document.getElementById("content");
-const footerDoc = document.getElementById("footer");
 
 function loadAbout() {
-  // const btn = document.createElement("button");
-  // const p = document.createElement("p");
-  // p.innerText = "idk";
-  // element.appendChild(p);
-  // btn.innerHTML = "Click me!";
-  // //btn.onclick = printMe;
-  // element.appendChild(btn);
-  // btn.addEventListener("click", test);
-  // element.classList.add("hello");
-  // return element;
   createNav();
-  createIntro();
-  //createMenu();
-  //   createChef();
-  //   createPlan();
-  //   createReview();
-  //   //chefList();
-  //   createChefList();
-  //   createFooter();
-}
-
-function test(){
-  console.log('ya')
+  aboutUs();
 }
 
 function createNav() {
@@ -52,16 +33,16 @@ function createNav() {
 
   const aboutNav = document.createElement("li");
   aboutNav.classList.add("about");
-  aboutNav.innerHTML = "About Us";
+  aboutNav.innerHTML = "About";
   ul.appendChild(aboutNav);
 
-  const menuNav = document.createElement("li");
-  menuNav.classList.add("menu");
-  menuNav.innerHTML = "Menu";
-  ul.appendChild(menuNav);
+//   const menuNav = document.createElement("li");
+//   menuNav.classList.add("menu");
+//   menuNav.innerHTML = "Menu";
+//   ul.appendChild(menuNav);
 
   const contactsNav = document.createElement("li");
-  contactsNav.classList.add("menu");
+  contactsNav.classList.add("contacts-nav");
   contactsNav.innerHTML = "Contacts";
   ul.appendChild(contactsNav);
 
@@ -77,134 +58,95 @@ function createNav() {
   reserveNav.classList.add("reserve");
   reserveNav.innerHTML = "Reserve Table";
   nav.appendChild(reserveNav);
+
+  contactsNav.addEventListener("click", (e) => {
+    console.log(e.target)
+    content.querySelectorAll('*').forEach(n => n.remove());
+      loadContact();
+      setActive(e.target)
+    });
+
+  logoDiv.addEventListener("click", (e) => {
+    console.log(e.target)
+    content.querySelectorAll('*').forEach(n => n.remove());
+      startWeb();
+      setActive(e.target)
+    });      
 }
 
-function createIntro() {
-  // intro text
-  const section = document.createElement("section");
-  section.classList.add("intro");
-  content.appendChild(section);
+function aboutUs(){
+  const aboutSect = document.createElement("div");
+  aboutSect.classList.add("about-sect");
+  content.appendChild(aboutSect);
 
-  const introDiv = document.createElement("div");
-  introDiv.classList.add("intro-div");
-  section.appendChild(introDiv);
+  const aboutTop = document.createElement("div");
+  aboutTop.classList.add("about-top");
+  aboutSect.appendChild(aboutTop);
 
-  // create title intro
-  const introTitle = document.createElement("h2");
-  introTitle.innerHTML = "We Serve The Taste You Love";
-  introDiv.appendChild(introTitle);
+  const aboutTopText = document.createElement("p");
+  aboutTopText.classList.add("about-text");
+  aboutTopText.innerHTML = "We are Bites, a young and beautiful team with a passion for tasty and traditional food.";
+  aboutTop.appendChild(aboutTopText);
 
-  // create intro text
-  const introText = document.createElement("p");
-  introText.innerHTML =
-    "This is the type of restaurant that serves foods and beverages, in additionto light refreshments such as baked goods or snacks. The term comes from the French word meaning food.";
-  introDiv.appendChild(introText);
+  const aboutImg = document.createElement("div");
+  aboutImg.classList.add("about-img");
+  aboutSect.appendChild(aboutImg);
+  
+  const aboutImgTitle = document.createElement("p");
+  aboutImgTitle.classList.add("about-img-title");
+  aboutImgTitle.innerHTML = "Rediscovering and relieving traditional Indonesian delicacies."
+  aboutImg.appendChild(aboutImgTitle);
 
-  const buttonSearch = document.createElement("div");
-  buttonSearch.classList.add("button-search");
-  introDiv.appendChild(buttonSearch);
+  const aboutImg2 = document.createElement("div");
+  aboutImg2.classList.add("about-img2");
+  aboutImg.appendChild(aboutImg2);
 
-  // create button
-  const button = document.createElement("div");
-  button.classList.add("button");
-  buttonSearch.appendChild(button);
-  const exploreButton = document.createElement("button");
-  exploreButton.classList.add("explore-button");
-  exploreButton.innerHTML = "Explore Food";
-  button.appendChild(exploreButton);
+  const image1 = document.createElement("img");
+  image1.setAttribute("src", "food33.jpg");
+  image1.classList.add("about-food1");
+  aboutImg2.appendChild(image1);
 
-  // create search
-  const searchContainer = document.createElement("div");
-  searchContainer.classList.add("search-container");
-  buttonSearch.appendChild(searchContainer);
-  const input = document.createElement("input");
-  input.classList.add("search-button");
-  input.setAttribute("type", "search");
-  input.setAttribute("placeholder", "Search");
-  searchContainer.appendChild(input);
+  const aboutImgTxt = document.createElement("p");
+  aboutImgTxt.classList.add("about-img-txt");
+  aboutImgTxt.innerHTML = "Our motivation was to rediscover and relive the Indonesian delicacies, just the way our grandparents used to do them, simple yet delicious, made from quality products, grown organically in the garden behind our home.";
+  aboutImg2.appendChild(aboutImgTxt);
 
-  const searchIcon = document.createElement("img");
-  searchIcon.setAttribute("src", "search2.png");
-  searchIcon.setAttribute("id", "input-img");
-  searchContainer.appendChild(searchIcon);
+  const image2 = document.createElement("img");
+  image2.setAttribute("src", "food32.jpg");
+  image2.classList.add("about-food2");
+  aboutImg.appendChild(image2);
 
-  // intro image
-  const introImage = document.createElement("div");
-  introImage.classList.add("intro-image");
-  section.appendChild(introImage);
+  const aboutImgTxt2 = document.createElement("p");
+  aboutImgTxt2.classList.add("about-img-txt2");
+  aboutImgTxt2.innerHTML = "Achieving excellency, without compromises or shortcuts.";
+  aboutImg.appendChild(aboutImgTxt2);
 
-  //
-  const imageIntroDiv = document.createElement("div");
-  imageIntroDiv.classList.add("image-intro-div");
-  imageIntroDiv.classList.add("intro-right");
-  introImage.appendChild(imageIntroDiv);
 
-  // added image
-  const foodImage = document.createElement("img");
-  foodImage.setAttribute("src", "food2.png");
-  foodImage.classList.add("food-image");
-  imageIntroDiv.appendChild(foodImage);
+//   const aboutImg = document.createElement("div");
+//   aboutImg.classList.add("about-img");
+//   aboutSect.appendChild(aboutImg);
 
-  // create small buttons
-  // types of foods
-  const introButtons = document.createElement("div");
-  introButtons.classList.add("intro-buttons");
-  introButtons.classList.add("intro-right");
-  introImage.appendChild(introButtons);
+//   const image = document.createElement("img");
+//   image.setAttribute("src", "cuisine.jpg");
+//   image.classList.add("about-cuisine");
+//   aboutImg.appendChild(image);
 
-  const button1 = document.createElement("button");
-  button1.classList.add("buttons");
-  button1.classList.add("button-1");
-  button1.innerHTML = "Dishes";
-  introButtons.appendChild(button1);
-  const dishesIcon = document.createElement("img");
-  button1.appendChild(dishesIcon);
-  button1.setAttribute("type", "button");
-  dishesIcon.setAttribute("src", "dishes.png");
-  dishesIcon.setAttribute("id", "dishes-img");
-  button1.appendChild(dishesIcon);
+//   const aboutText = document.createElement("div");
+//   aboutText.classList.add("about-txt");
+//   aboutSect.appendChild(aboutText);
 
-  const button2 = document.createElement("button");
-  button2.classList.add("buttons");
-  button2.classList.add("button-2");
-  button2.innerHTML = "Dessert";
-  introButtons.appendChild(button2);
-  const dessertIcon = document.createElement("img");
-  dessertIcon.setAttribute("src", "dessert.png");
-  dessertIcon.setAttribute("id", "dessert-img");
-  button2.appendChild(dessertIcon);
+//   const inputSubject = document.createElement("input");
+//   inputSubject.classList.add("input-subject");
+//   inputSubject.setAttribute("type", "text");
+//   inputSubject.setAttribute("placeholder", "Subject");
+//   form.appendChild(inputSubject);
 
-  const button3 = document.createElement("button");
-  button3.classList.add("buttons");
-  button3.classList.add("button-3");
-  button3.innerHTML = "Drinks";
-  introButtons.appendChild(button3);
-  const drinkIcon = document.createElement("img");
-  drinkIcon.setAttribute("src", "drinks.png");
-  drinkIcon.setAttribute("id", "drinks-img");
-  button3.appendChild(drinkIcon);
-
-  const button4 = document.createElement("button");
-  button4.classList.add("buttons");
-  button4.classList.add("button-4");
-  button4.innerHTML = "Platter";
-  introButtons.appendChild(button4);
-  const platterIcon = document.createElement("img");
-  platterIcon.setAttribute("src", "platter.png");
-  platterIcon.setAttribute("id", "platter-img");
-  button4.appendChild(platterIcon);
-
-  const button5 = document.createElement("button");
-  button5.classList.add("buttons");
-  button5.classList.add("button-5");
-  button5.innerHTML = "Snacks";
-  introButtons.appendChild(button5);
-  const snackIcon = document.createElement("img");
-  snackIcon.setAttribute("src", "snacks.png");
-  snackIcon.setAttribute("id", "snacks-img");
-  button5.appendChild(snackIcon);
+//   const inputSubmit = document.createElement("input");
+//   inputSubmit.classList.add("input-submit");
+//   inputSubmit.setAttribute("type", "submit");
+//   inputSubmit.setAttribute("placeholder", "Submit");
+//   form.appendChild(inputSubmit);
 }
-
 
 export default loadAbout;
 

@@ -11,7 +11,7 @@ body {
 // NAV SECTION //
 
 nav {
-  @include flex(space-between, center, row);
+  @include flex(space-around, center, row);
   min-height: 10vh;
   //width: 60%;
   flex-wrap: wrap;
@@ -21,9 +21,9 @@ nav {
   color: #643911;
   .logo-div {
     @include flex(flex-start, center, row);
-    flex: 1 1 30rem;
+    flex: 1 1 50rem;
     img {
-      max-width: 11%;
+      max-width: 8%;
     }
     h1 {
       margin: 2rem 0.6rem;
@@ -227,7 +227,7 @@ nav {
   }
 }
 
-// CARDS
+// CARDS //
 .cards-div {
   @include flex(center, center, row);
   min-height: 50vh;
@@ -301,6 +301,7 @@ nav {
     border: 0.2rem solid white;
   }
 }
+
 
 // CHEF SECTION //
 .chef-div {
@@ -489,14 +490,124 @@ footer {
     display: flex;
     list-style: none;
     flex: 1 1 40rem;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    li{
+      margin: 0rem 3rem;
+    }
   }
   h5 {
     flex: 1 1 40rem;
     font-size: 2.5rem;
   }
 }
+
+// CONTACT SECTION //
+.contact-sect{
+  @include flex(space-between, center, row);
+  flex-wrap: wrap;
+  //height: 100px;
+  //margin-top: 100px;
+  //background-color: white;
+  min-height: 100vh;
+  left: 50%;
+  margin: 7rem 0rem 15rem 0rem;
+  .contact-img{
+    flex: 1 1 60rem;
+    img{
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 3rem;
+    }
+  }
+  .contact-txt{
+    flex: 1 1 30rem;
+    margin-left: 5rem;
+    margin-top: 3rem;
+    input{
+      @include flex(space-between, center, row);
+      border: none;
+      font-family: "quicksand", sans-serif;
+      padding: 0.8rem 0rem 0.8rem 0rem;
+      padding-right: 35%;
+      margin: 2rem 0rem;
+      border-bottom: 2px solid #E9E7E9;
+      background-color: #f9f3ea;
+    }
+    .input-submit{
+      border-bottom: none;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      background: #333;
+      color: #f2f2f2;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      border-radius: 2px;
+    }
+  }
+}
+
+// ABOUT SECTION //
+.about-sect{
+  @include flex(space-between, center, row);
+  flex-wrap: wrap;
+  max-width: 78%;
+  margin: auto;
+  .about-top{
+    min-height: 40vh;
+    background-color: #301904;;
+    color:white;
+    @include flex(center, center, row);
+    margin-top: 6rem;
+    border-radius: 2rem;
+  }
+  .about-text{
+    display: flex;
+    font-size: 3.5rem;
+    padding: 0rem 8rem;
+    text-align: center;
+  }
+  .about-img{
+    img{
+    max-width: 38%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    }
+    .about-food2{
+      max-width: 55%;
+      transform: translate(31rem, -7rem);
+      height: 100%
+    }
+    .about-img2{
+      @include flex(center, center, row);
+      p{
+        margin: 0rem 0rem 0rem 3rem;
+        color: #74461c;
+        font-size: 2rem;
+      }
+      img{
+        z-index: 5;
+        transform: translate(0rem, 5rem);
+      }
+    }
+    .about-img-txt2{
+      color: #BA9E6A;
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 15rem;
+      padding: 0rem 20rem;
+    }
+  }
+  .about-img-title{
+    margin: 4rem 0rem 0rem 0rem;
+    font-size: 2.8rem;
+    // padding-right: 50rem;
+    max-width: 55%;
+    padding-right: 5rem;
+    color: #d39d6a;
+  }
+}
+
 
 @font-face {
   font-family: montserrat-bold;

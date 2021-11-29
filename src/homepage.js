@@ -412,7 +412,7 @@ function createChef() {
 
   const buttonChef = document.createElement("button");
   buttonChef.classList.add("btn-chef");
-  buttonChef.innerHTML = "About Us";
+  buttonChef.innerHTML = "About";
   chefDesc.appendChild(buttonChef);
 }
 
